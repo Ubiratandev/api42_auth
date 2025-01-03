@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Status de login</title>
+</head>
+<body>
+    <h1>Status do cadete</h1>
+    
+    <h3>Total de horas gastas nos últimos 90 dias: {{ total_hours }} horas</h3>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Data</th>
+                <th>Horas Gastas</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for date, hours in status_list.items %}
+            <tr>
+                <td>{{ date }}</td>
+                <td>{{ hours }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
